@@ -1310,13 +1310,16 @@
       "icon": "https://cdn2.steamgriddb.com/icon/49ecdefc6bc4a0afbe59cbf51212146c.png",
       "save": "saves"
     },{
-      "-name": "Lost Odyssey (LostOdysseyRecomp)",
-      "tags": ["360", "rpg"],
-      "source": "https://github.com/freefrank/LostOdysseyRecomp/",
+      "name": "Lost Odyssey (LostOdysseyRecomp)",
+      "tags": ["360", "rpg", "multilingual"],
+      "source": "https://github.com/freefrank/LostOdysseyRecomp",
       "folder": "LostOdysseyRecomp",
-      "instructions": "Required files: Audited Europe, Asia or USA, Europe edition; Disc 1 is required to start",
+      "executable": "LostOdysseyRecomp.exe",
+      "instructions": "Required files: Lost Odyssey Disc 1 (Xbox 360) -- USA/Europe edition (Redump 11817) or Europe/Asia edition (Redump 39111), as an ISO, GOD container, or extracted folder with default.xex. Disc 1 is required to start; discs 2-4 and DLC can be imported later from the same edition (never mix editions).\n\nWhen asked which file to download, pick the .zip WITHOUT \"-legacy\" in its name.\n\nRun the game once: the importer opens automatically. Choose Files or Folder, point it at your disc, confirm, then pick language and graphics settings. Additional discs and DLC: run InstallGame.exe in the port folder. First launch compiles shaders and can take several minutes.\n\nLanguages: English, Japanese, French, German, Spanish, Italian (USA/Europe edition) or English, Japanese, Korean, Chinese (Europe/Asia edition).\n\nRequires Windows x64, an AVX-capable CPU and Direct3D 12 or Vulkan. Early testing: rendering and stability issues remain.",
       "image": "https://cdn2.steamgriddb.com/grid/cc45afd64609c369cc7ac4e8d70fbdc8.jpg",
-      "icon": "https://cdn2.steamgriddb.com/icon/5162c8e2f5e54609e7f32ae984efe16a/32/64x64.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/5162c8e2f5e54609e7f32ae984efe16a/32/64x64.png",
+      "save": "save",
+      "save2": "profile"
     },{
       "name": "Luanti",
       "tags": ["quality", "free", "pc", "minecraft", "multiplayer"],
