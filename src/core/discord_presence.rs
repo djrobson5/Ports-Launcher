@@ -41,7 +41,7 @@ const POLL_INTERVAL: Duration = Duration::from_millis(500);
 /// rejoindre (voir `party`, jamais utilisé ici pour ne pas entrer en
 /// conflit avec le Rich Presence propre d'un port, voir la discussion de
 /// conception).
-const GITHUB_URL: &str = "https://github.com/Nyaldee/Ports-Launcher";
+const GITHUB_URL: &str = "https://github.com/djrobson5/Ports-Launcher";
 
 /// Badge en coin de l'icône du jeu -- une clé d'asset (pas une URL), pointant
 /// vers une image uploadée une fois sur le portail développeur (Rich

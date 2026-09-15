@@ -55,10 +55,10 @@ const PAGE_ROWS: i32 = 10;
 /// Page ouverte par le bouton "GitHub" quand il affiche encore ce texte --
 /// une fois passé en "Update" (voir AppEvent::SelfUpdateAvailable), le clic
 /// lance ports_launcher_updater.bat à la place (voir launch_self_update).
-const GITHUB_URL: &str = "https://github.com/Nyaldee/Ports-Launcher";
+const GITHUB_URL: &str = "https://github.com/djrobson5/Ports-Launcher";
 /// Dépôt de référence pour la vérification de mise à jour du launcher
 /// lui-même (voir start_self_update_check).
-const SELF_REPO: &str = "Nyaldee/Ports-Launcher";
+const SELF_REPO: &str = "djrobson5/Ports-Launcher";
 const DISCORD_URL: &str = "https://discord.com/invite/5GYmst9twA";
 
 fn acquire_single_instance_lock() -> Option<TcpListener> {
