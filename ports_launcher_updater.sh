@@ -13,7 +13,7 @@ sleep 2
 
 echo "Downloading latest version..."
 TMPFILE="$(mktemp /tmp/PortsLauncher-update.XXXXXX.tar.gz)"
-curl -L -o "$TMPFILE" "https://github.com/Nyaldee/Ports-Launcher/releases/latest/download/Ports.Launcher.Linux.tar.gz" || { echo "Download failed."; read -r _; exit 1; }
+curl -L -o "$TMPFILE" "https://github.com/djrobson5/Ports-Launcher/releases/latest/download/Ports.Launcher.Linux.tar.gz" || { echo "Download failed."; read -r _; exit 1; }
 
 # L'archive contient elle-même un dossier "Ports Launcher/" -- extraire dans
 # le PARENT recrée/écrase ce même dossier d'install en place, tant que ce
@@ -36,8 +36,8 @@ rm -f "$TMPFILE"
 chmod +x "$INSTALL_DIR/ports_launcher" "$INSTALL_DIR/7zzs" 2>/dev/null
 
 echo "Refreshing catalog..."
-curl -fsSL -o /tmp/ports.json.new "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/ports.json" && mv -f /tmp/ports.json.new "$INSTALL_DIR/ports.json"
-curl -fsSL -o /tmp/themes.json.new "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/themes.json" && mv -f /tmp/themes.json.new "$INSTALL_DIR/themes.json"
+curl -fsSL -o /tmp/ports.json.new "https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main/ports.json" && mv -f /tmp/ports.json.new "$INSTALL_DIR/ports.json"
+curl -fsSL -o /tmp/themes.json.new "https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main/themes.json" && mv -f /tmp/themes.json.new "$INSTALL_DIR/themes.json"
 
 nohup "$INSTALL_DIR/ports_launcher" >/dev/null 2>&1 &
 mv -f "$0" "$INSTALL_DIR/$(basename "$0")"
