@@ -1,0 +1,45 @@
+# Keeps this fork's `main` in sync with Nyaldee/Ports-Launcher.
+# Fast-forwards when possible, otherwise creates a merge commit.
+# If upstream conflicts with fork-local changes, the job fails so it shows up
+# in the Actions tab instead of silently drifting.
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # daily, 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge upstream/main
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add upstream https://github.com/Nyaldee/Ports-Launcher.git
+          git fetch upstream main
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "Already up to date with upstream."
+            exit 0
+          fi
+          if git merge --ff-only upstream/main 2>/dev/null; then
+            echo "Fast-forwarded to upstream."
+          elif git merge --no-edit upstream/main; then
+            echo "Merged upstream (merge commit created)."
+          else
+            git merge --abort
+            echo "::error::Merge conflict with upstream. Resolve locally: git fetch upstream && git merge upstream/main"
+            exit 1
+          fi
+          git push origin main
