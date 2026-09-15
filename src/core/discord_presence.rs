@@ -9,7 +9,7 @@ const CLIENT_ID: &str = "1548801841557541065";
 
 const POLL_INTERVAL: Duration = Duration::from_millis(500);
 
-const GITHUB_URL: &str = "https://github.com/Nyaldee/Ports-Launcher";
+const GITHUB_URL: &str = "https://github.com/djrobson5/Ports-Launcher";
 
 const SMALL_IMAGE_KEY: &str = "icon_discord_apps";
 

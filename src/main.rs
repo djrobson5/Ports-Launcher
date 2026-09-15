@@ -33,8 +33,8 @@ const SINGLE_INSTANCE_PORT: u16 = 57391;
 
 const PAGE_ROWS: i32 = 10;
 
-const GITHUB_URL: &str = "https://github.com/Nyaldee/Ports-Launcher";
-const SELF_REPO: &str = "Nyaldee/Ports-Launcher";
+const GITHUB_URL: &str = "https://github.com/djrobson5/Ports-Launcher";
+const SELF_REPO: &str = "djrobson5/Ports-Launcher";
 const DISCORD_URL: &str = "https://discord.com/invite/5GYmst9twA";
 
 fn acquire_single_instance_lock() -> Option<TcpListener> {

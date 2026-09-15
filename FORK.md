@@ -17,6 +17,14 @@ kept in sync with upstream so it can serve as a base for experimental features
   git push origin main
   ```
 
+## Divergences from upstream
+
+- The catalog/theme raw URLs, self-update repo, GitHub links and the two
+  updater scripts point at `djrobson5/Ports-Launcher` instead of upstream, so
+  a binary built from this fork serves this fork's `ports.json`.
+- `ports.json` carries fork-only entries (currently Lost Odyssey). When an
+  upstream sync conflicts on that file, keep both sides' changes.
+
 ## Local setup
 
 ```sh
