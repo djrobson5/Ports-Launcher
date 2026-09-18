@@ -17,6 +17,17 @@ kept in sync with upstream so it can serve as a base for experimental features
   git push origin main
   ```
 
+- If upstream rewrites its history (the job fails with "shares no history"),
+  the fork's `main` has to be rebuilt on the new upstream tip. Fork-local
+  commits are the ones after the last upstream commit:
+
+  ```sh
+  git fetch upstream
+  git rebase --onto upstream/main <last-upstream-commit-on-main> main
+  # resolve conflicts (keep upstream's lines, swap Nyaldee -> djrobson5)
+  git push --force-with-lease origin main
+  ```
+
 ## Divergences from upstream
 
 - The catalog/theme raw URLs, self-update repo, GitHub links and the two

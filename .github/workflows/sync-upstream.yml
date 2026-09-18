@@ -1,7 +1,7 @@
 # Keeps this fork's `main` in sync with Nyaldee/Ports-Launcher.
 # Fast-forwards when possible, otherwise creates a merge commit.
-# If upstream conflicts with fork-local changes, the job fails so it shows up
-# in the Actions tab instead of silently drifting.
+# If upstream conflicts with fork-local changes, or rewrites its history, the
+# job fails so it shows up in the Actions tab instead of silently drifting.
 name: Sync upstream
 
 on:
@@ -32,6 +32,10 @@ jobs:
           if git merge-base --is-ancestor upstream/main HEAD; then
             echo "Already up to date with upstream."
             exit 0
+          fi
+          if ! git merge-base HEAD upstream/main >/dev/null 2>&1; then
+            echo "::error::upstream/main shares no history with this fork (upstream rewrote/squashed its history). Rebase the fork-local commits onto the new upstream tip locally, then force-push main. See FORK.md."
+            exit 1
           fi
           if git merge --ff-only upstream/main 2>/dev/null; then
             echo "Fast-forwarded to upstream."
