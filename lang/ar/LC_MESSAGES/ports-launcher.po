@@ -99,9 +99,6 @@ msgstr "جارٍ التثبيت"
 msgid "Loading"
 msgstr "جارٍ التحميل"
 
-msgid "No Executable Found"
-msgstr "لم يتم العثور على ملف تنفيذي"
-
 msgid "Choose favorite executable"
 msgstr "اختر الملف التنفيذي المفضل"
 
@@ -110,9 +107,6 @@ msgstr "إصدار غير صالح"
 
 msgid "Choose an executable"
 msgstr "اختر ملفًا تنفيذيًا"
-
-msgid "Executable Not Found"
-msgstr "الملف التنفيذي غير موجود"
 
 msgid "Uninstall Error"
 msgstr "خطأ في إلغاء التثبيت"
@@ -236,6 +230,9 @@ msgstr "التحقق من التحديثات: مفعّل"
 
 msgid "Check for Updates: Off"
 msgstr "التحقق من التحديثات: معطّل"
+
+msgid "Force Update"
+msgstr "فرض التحديث"
 
 msgid "Type to search..."
 msgstr "ابحث..."

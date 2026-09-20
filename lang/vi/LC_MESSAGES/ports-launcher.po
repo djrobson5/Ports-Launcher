@@ -99,9 +99,6 @@ msgstr "Đang cài đặt"
 msgid "Loading"
 msgstr "Đang tải"
 
-msgid "No Executable Found"
-msgstr "Không tìm thấy tệp thực thi"
-
 msgid "Choose favorite executable"
 msgstr "Chọn tệp thực thi yêu thích"
 
@@ -110,9 +107,6 @@ msgstr "Port không hợp lệ"
 
 msgid "Choose an executable"
 msgstr "Chọn một tệp thực thi"
-
-msgid "Executable Not Found"
-msgstr "Không tìm thấy tệp thực thi"
 
 msgid "Uninstall Error"
 msgstr "Lỗi gỡ cài đặt"
@@ -236,6 +230,9 @@ msgstr "Kiểm tra cập nhật: Bật"
 
 msgid "Check for Updates: Off"
 msgstr "Kiểm tra cập nhật: Tắt"
+
+msgid "Force Update"
+msgstr "Buộc cập nhật"
 
 msgid "Type to search..."
 msgstr "Tìm kiếm..."

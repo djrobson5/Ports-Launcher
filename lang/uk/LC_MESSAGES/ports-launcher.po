@@ -99,9 +99,6 @@ msgstr "Встановлення"
 msgid "Loading"
 msgstr "Завантаження"
 
-msgid "No Executable Found"
-msgstr "Виконуваний файл не знайдено"
-
 msgid "Choose favorite executable"
 msgstr "Виберіть улюблений виконуваний файл"
 
@@ -110,9 +107,6 @@ msgstr "Недійсний порт"
 
 msgid "Choose an executable"
 msgstr "Виберіть виконуваний файл"
-
-msgid "Executable Not Found"
-msgstr "Виконуваний файл не знайдено"
 
 msgid "Uninstall Error"
 msgstr "Помилка видалення"
@@ -236,6 +230,9 @@ msgstr "Перевірка оновлень: увімк."
 
 msgid "Check for Updates: Off"
 msgstr "Перевірка оновлень: вимк."
+
+msgid "Force Update"
+msgstr "Примусове оновлення"
 
 msgid "Type to search..."
 msgstr "Пошук..."

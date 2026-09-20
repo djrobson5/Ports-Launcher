@@ -22,7 +22,7 @@ A lightweight library/installer for native "recomp" and source-port builds of co
 - **Discord Rich Presence** switch in Settings (off by default) — shows the game you're playing on your Discord profile while it's running
 - Playtime tracking — every port's cumulated play time and last-played date show up in its Info panel, with a **Reset Game Time** button if you want to start the counter over; the catalog itself lists your most recently played ports first
 - Uninstall in one click, with your save data preserved if it lives inside the port's own folder; box art is downloaded once and cached locally afterward
-- **Backup Saves** button in Settings to export every port's saves into a dated folder in one click (see [Game Saves](#game-saves) for both mechanisms)
+- **Save Backup** button in Settings to export every port's saves into a dated folder in one click (see [Game Saves](#game-saves) for both mechanisms)
 - Info panel per port: installed version/tag, setup instructions, and one-click links to the website, mods page, install folder, and save folder(s) — with fully selectable/copyable instructions text
 - **Select version** button in the Info panel — pick from the last few GitHub/GitLab releases and install that one instead of always the latest, useful when the newest release drops a platform you need (e.g. a Windows build); also doubles as a way to force an update right away instead of waiting for the next Play
 - **Install extras** button in the Info panel — for a port whose `ports.json` entry has an `extra` link, downloads that extra file or archive into the port's folder on demand (overwriting same-named files; an archive is unpacked, a loose file is dropped in as-is). Meant for optional add-ons that aren't part of the port's own releases — ready-made launch options or preset config files, often an arbitrary pick. Installing a port never pulls these in by itself
@@ -82,16 +82,16 @@ Ports Launcher handles two separate save mechanisms, both based on `ports.json`'
 
 **Automatic preservation** (uninstall/reinstall) — uninstalling a port whose save lives inside the install folder copies it to `Saves Backup/Pending Restore/<folder>/save_folder/` (or `.../save_folder2/` for the second save location) a moment before the rest of the folder is deleted, then a later install of that same port moves it straight back into place and removes this temporary copy. A save that sits outside the install folder (e.g. under `%APPDATA%`) is never touched by an uninstall either way — it already survives on its own. `Pending Restore` is never a history: a single slot per port/field, overwritten on every uninstall — worth knowing about if you're digging through `Saves Backup/` by hand for a save that seems to have vanished mid-reinstall, or if an install gets interrupted and you need to recover it manually.
 
-**Manual export** (**Backup Saves** button, see [Settings](#settings) right below) — on demand, exports every port's saves across the whole catalog (installed or not, external or local) into a dated folder under `Saves Backup/Global Backups/<date>/<folder>/`, created fresh on every click without ever touching earlier dated folders — an actual history of snapshots, unlike `Pending Restore`.
+**Manual export** (**Save Backup** button, see [Settings](#settings) right below) — on demand, exports every port's saves across the whole catalog (installed or not, external or local) into a dated folder under `Saves Backup/Global Backups/<date>/<folder>/`, created fresh on every click without ever touching earlier dated folders — an actual history of snapshots, unlike `Pending Restore`.
 
 ## Settings
 
-Open it from the **◯** button in the title bar — a menu with **Themes**, **Language**, **Files**, **Library**, **Backup Saves**, **Check for Updates**, **Force Update**, and **Discord Rich Presence**.
+Open it from the **◯** button in the title bar — a menu with **Themes**, **Language**, **Files**, **Library**, **Save Backup**, **Check for Updates**, **Force Update**, and **Discord Rich Presence**.
 
 - **Themes** and **Language** both open the same kind of live, fuzzy-searchable picker. For Themes, moving the selection (mouse hover, or `↑`/`↓`/the controller stick) previews it instantly across the whole app; confirming writes straight back to `themes.json`, and closing without confirming (`Escape`) reverts to whichever theme was active before. Language switches the UI immediately on selection, no restart needed.
 - **Files** opens shortcuts to `ports.json`, `ports.local.json`, `state.json`, and `themes.json`, greyed out if a file doesn't exist yet.
 - **Library** jumps straight to that folder in Explorer.
-- **Backup Saves** kicks off a full save export for the whole catalog into a dated folder (see [Game Saves](#game-saves) above), with a progress window while it copies.
+- **Save Backup** kicks off a full save export for the whole catalog into a dated folder (see [Game Saves](#game-saves) above), with a progress window while it copies.
 - **Check for Updates** toggles On/Off right in the menu — turns every update check off at once (the launcher's own, and every installed port's at Play), for anyone who'd rather update everything by hand instead.
 - **Force Update** runs the launcher's own updater right away, without checking first whether a newer build actually exists — for anyone who doesn't want to wait for the periodic check (or has it turned off above).
 - **Discord Rich Presence** toggles On/Off right in the menu, off by default — shows the game you're playing on your Discord status while it's running, and clears itself the moment you close it.
