@@ -231,6 +231,9 @@ msgstr "بررسی به‌روزرسانی‌ها: روشن"
 msgid "Check for Updates: Off"
 msgstr "بررسی به‌روزرسانی‌ها: خاموش"
 
+msgid "Force Update"
+msgstr "به‌روزرسانی اجباری"
+
 msgid "Type to search..."
 msgstr "جستجو..."
 

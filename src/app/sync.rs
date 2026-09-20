@@ -6,15 +6,31 @@ use crate::ui::gamepad_router::GamepadRouter;
 use crate::Tr;
 use slint::ComponentHandle;
 use std::cell::RefCell;
+use std::path::Path;
 use std::rc::Rc;
+use std::time::Duration;
 
 #[cfg(target_os = "windows")]
 const UPDATER_NAME: &str = "ports_launcher_updater.bat";
 #[cfg(target_os = "linux")]
 const UPDATER_NAME: &str = "ports_launcher_updater.sh";
 
+#[cfg(target_os = "windows")]
+const UPDATER_RAW_URL: &str = "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/ports_launcher_updater.bat";
+#[cfg(target_os = "linux")]
+const UPDATER_RAW_URL: &str = "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/ports_launcher_updater.sh";
+
+fn refresh_updater_script(path: &Path) {
+    let agent = crate::core::http::agent(Duration::from_secs(5));
+    let Ok(mut resp) = agent.get(UPDATER_RAW_URL).call() else { return };
+    if let Ok(text) = resp.body_mut().read_to_string() {
+        let _ = std::fs::write(path, text);
+    }
+}
+
 pub(crate) fn launch_self_update(app: &Rc<AppState>, router: &Rc<RefCell<GamepadRouter>>) {
     let updater = crate::base_dir().join(UPDATER_NAME);
+    refresh_updater_script(&updater);
     match crate::core::launch::launch(&updater) {
         Ok(_) => {
             let mut state = app.state.borrow_mut();

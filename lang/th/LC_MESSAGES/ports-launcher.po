@@ -231,6 +231,9 @@ msgstr "ตรวจสอบการอัปเดต: เปิด"
 msgid "Check for Updates: Off"
 msgstr "ตรวจสอบการอัปเดต: ปิด"
 
+msgid "Force Update"
+msgstr "บังคับอัปเดต"
+
 msgid "Type to search..."
 msgstr "ค้นหา..."
 

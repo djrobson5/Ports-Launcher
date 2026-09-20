@@ -231,6 +231,9 @@ msgstr "Periksa pembaruan: Aktif"
 msgid "Check for Updates: Off"
 msgstr "Periksa pembaruan: Nonaktif"
 
+msgid "Force Update"
+msgstr "Paksa perbarui"
+
 msgid "Type to search..."
 msgstr "Cari..."
 

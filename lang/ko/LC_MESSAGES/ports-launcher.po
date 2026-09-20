@@ -231,6 +231,9 @@ msgstr "업데이트 확인: 켜짐"
 msgid "Check for Updates: Off"
 msgstr "업데이트 확인: 꺼짐"
 
+msgid "Force Update"
+msgstr "강제 업데이트"
+
 msgid "Type to search..."
 msgstr "검색..."
 

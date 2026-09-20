@@ -231,6 +231,9 @@ msgstr "Güncelleme kontrolü: Açık"
 msgid "Check for Updates: Off"
 msgstr "Güncelleme kontrolü: Kapalı"
 
+msgid "Force Update"
+msgstr "Güncellemeyi zorla"
+
 msgid "Type to search..."
 msgstr "Ara..."
 

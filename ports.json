@@ -196,7 +196,8 @@
       "icon": "https://cdn2.steamgriddb.com/icon/7c220a2091c26a7f5e9f1cfb099511e3.png",
       "save": {
         "windows": "%LOCALAPPDATA%\\BanjoRecompiled",
-        "linux": "~/.config/BanjoRecompiled"
+        "linux": "~/.config/BanjoRecompiled",
+        "android": "/storage/emulated/0/Android/data/com.aure.banjorecomp/files/saves"
       },
       "save2": "saves"
     },{
@@ -277,6 +278,7 @@
       "folder": "BM64Recomp",
       "instructions": "Required files: Bomberman 64 (USA).z64 (CRC32: 3ED0E0DC)\n\nWindows:\nPortable saves : portable.txt in root folder.",
       "image": "https://cdn2.steamgriddb.com/grid/c5b781ce025e8217c23f95f9569a0b96.png",
+      "icon": "https://cdn2.steamgriddb.com/icon/30c0a496a57bcc2c7c6c481342526729/32/152x152.png",
       "save": {
         "windows": "%LOCALAPPDATA%\\BM64Recompiled",
         "linux": "~/.config/BM64Recompiled"
@@ -289,7 +291,11 @@
       "folder": "BMHeroRecomp",
       "instructions": "Required files: Bomberman Hero (USA).z64 (CRC32: 2CC2E634)",
       "image": "https://cdn2.steamgriddb.com/grid/c066a90d58918e9b6bd5073037966adc.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/baaedcdb844cfad4d960c9df351fd807.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/fa8cdd11992647240408bc1d3c09bc82.png",
+      "save": {
+        "windows": "%LOCALAPPDATA%\\BMHeroRecompiled\\saves",
+        "linux": "~/.config/BMHeroRecompiled/saves"
+      }
     },{
       "name": "Brave Fencer Musashi (brave-fencer-musashi-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -408,7 +414,8 @@
       "folder": "CrashBandicoot-Launcher",
       "instructions": "Required files: Crash Bandicoot (USA).bin/cue (CRC32: 41B5F211/7420271E)\n\nLanguages: English",
       "image": "https://cdn2.steamgriddb.com/grid/8282b546dda9ec05515966ba0fe3e5d1.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/8c97612c3a3f6f599b47dce13298f48a.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/8c97612c3a3f6f599b47dce13298f48a.png",
+      "save": "save"
     },{
       "name": "Crash Bandicoot 2: Cortex Strikes Back (Crash2Recomp)",
       "tags": ["ps1", "platformer"],
@@ -416,7 +423,8 @@
       "folder": "Crash2Recomp",
       "instructions": "Required files: Crash Bandicoot 2 - Cortex Strikes Back (USA).bin/cue (CRC32: 395C0916/70106695)\n\nLanguages: English",
       "image": "https://cdn2.steamgriddb.com/grid/17dddefe8de5448105e58ca6e033a792.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/fc8fdb29501a6289b7bc8b0bdd8155df.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/fc8fdb29501a6289b7bc8b0bdd8155df.png",
+      "save": "userdata"
     },{
       "name": "Crash Bandicoot 3: Warped (crash-bandicoot-3-warped-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -431,11 +439,18 @@
       "name": "Crash Team Racing (ctr-native)",
       "tags": ["ps1", "racing", "multiplayer"],
       "source": "https://github.com/CTR-tools/ctr-native",
+      "android_source": "https://github.com/igawa6/ctr-native-android",
+      "android_package": "com.ctrnative",
       "folder": "ctr-native",
       "instructions": "Required files: CTR - Crash Team Racing (USA).bin (CRC32: 9A742438)\n\nLanguages: English.\n\nPlace the .bin file in the assets folder at the root of the port folder.",
       "mods": "https://github.com/CTR-tools/CTR-ModSDK",
       "image": "https://cdn2.steamgriddb.com/grid/9ab753f52cc2010c347f05159edb9bd6.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/de0d969fa05ce77bb4f5d11b23f0c2fd.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/de0d969fa05ce77bb4f5d11b23f0c2fd.png",
+      "save": {
+        "windows": "memcards",
+        "linux": "memcards",
+        "android": "/storage/emulated/0/Android/data/com.ctrnative/files/memcards"
+      }
     },{
       "name": "Dante's Inferno (hells-gate-recomp)",
       "tags": ["360", "beat them all"],
@@ -459,7 +474,11 @@
       "folder": "Dead_Rising_2_Case_Zero_Xenon_Recomp",
       "instructions": "Required files: USA ?\n\nUse extract-xiso.exe to extract the contents of the ISO.\nInside the newly created folder, rename the DBZ1 folder to assets.\nMove the assets folder to the root of the port folder.\nInside the assets folder, rename yae1_xenon.xex to default.xex.\n\nLanguages: English.",
       "image": "https://cdn2.steamgriddb.com/grid/9ba0ccf0a69ae15c85d1b289baa4d494.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/75814c64e85b3353a7a71fcf0d3c4a2f.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/75814c64e85b3353a7a71fcf0d3c4a2f.png",
+      "save": {
+        "windows": "%USERPROFILE%\\Saved Games\\Dead Rising 2 Case Zero",
+        "linux": "~/.local/share/Dead Rising 2 Case Zero"
+      }
     },{
       "name": "Deadly Premonition (DPRecomp)",
       "tags": ["360", "survival horror", "multilingual"],
@@ -511,10 +530,17 @@
       "name": "Diablo + Hellfire (DevilutionX)",
       "tags": ["pc", "hack and slash"],
       "source": "https://github.com/diasurgical/DevilutionX",
+      "android_source": "https://github.com/diasurgical/DevilutionX",
+      "android_package": "org.diasurgical.devilutionx",
       "folder": "DevilutionX",
       "instructions": "Required files: Diablo + Hellfire on GOG.",
       "image": "https://cdn2.steamgriddb.com/grid/d0ae205c142c0aa84e1f7a7c20c0c7e5.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/2e2c4bf7ceaa4712a72dd5ee136dc9a8.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/2e2c4bf7ceaa4712a72dd5ee136dc9a8.png",
+      "save": {
+        "windows": "%APPDATA%\\diasurgical\\devilution",
+        "linux": "~/.local/share/diasurgical/devilution",
+        "android": "/data/user/0/org.diasurgical.devilutionx/files"
+      }
     },{
       "name": "Diddy Kong Racing (DKR-R)",
       "tags": ["online", "n64", "racing", "multiplayer", "multilingual"],
@@ -523,16 +549,23 @@
       "instructions": "Required files: Diddy Kong Racing (USA) (En,Fr)/(En,Fr,De) (Rev 1).z64 (CRC32: 5ACCA298/B1E87639)\n\nLanguages: English, French, German.",
       "image": "https://cdn2.steamgriddb.com/grid/4c38b84197c2e1a8444814d95c2487a8.png",
       "icon": "https://cdn2.steamgriddb.com/icon/a607946dc79f1013740366224ff2b175.png",
-      "save": "%APPDATA%\\DKRPort"
+      "save": {
+        "windows": "%APPDATA%\\DKRPort",
+        "linux": "~/.config/dkr-port"
+      }
     },{
       "name": "Diddy Kong Racing (goldenballoon)",
-      "tags": ["n64", "racing", "multiplayer", "multilingual"],
+      "tags": ["online", "n64", "racing", "multiplayer", "multilingual"],
       "source": "https://github.com/akratch/goldenballoon",
       "folder": "goldenballoon",
-      "instructions": "Required files: Diddy Kong Racing (USA) (En,Fr)/(En,Fr,De) (Rev 1).z64 (CRC32: 5ACCA298/B1E87639)\n\nLanguages: English, French, German.",
+      "instructions": "Required files: Diddy Kong Racing (USA) (En,Fr)/(En,Fr,De) (Rev 1).z64 (CRC32: 5ACCA298/B1E87639)\n\nLanguages: English, French, German.\nPortable saves : portable.txt in root folder.",
       "image": "https://cdn2.steamgriddb.com/grid/4c38b84197c2e1a8444814d95c2487a8.png",
       "icon": "https://cdn2.steamgriddb.com/icon/a607946dc79f1013740366224ff2b175.png",
-      "save": "save"
+      "save": {
+        "windows": "%APPDATA%\\mdkr64\\mdkr64\\save",
+        "linux": "~/.local/share/mdkr64/mdkr64/save"
+      },
+      "save2": "."
     },{
       "name": "Die Hard Trilogy (die-hard-trilogy-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -642,7 +675,18 @@
       "folder": "DKC1Recomp",
       "instructions": "Required files: Donkey Kong Country (USA).sfc (CRC32: C946DCA0)",
       "image": "https://cdn2.steamgriddb.com/grid/befa1d1faf9bc95c1a29d30ea9a751a2.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/ab9d867904cd28aa15dad078d8672de4.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/ab9d867904cd28aa15dad078d8672de4.png",
+      "save": "%APPDATA%\\Flat2VR\\DKC1Recomp\\saves"
+    },{
+      "name": "Donkey Kong Country 2: Diddy's Kong Quest (DKC2-Android-Port)",
+      "tags": ["snes", "platformer", "android_only"],
+      "android_source": "https://github.com/deivid22srk/DKC2-Android-Port",
+      "android_package": "com.deivid22srk.dkc2recomp",
+      "image": "https://cdn2.steamgriddb.com/grid/5815383dbef0d664c7420eecc4303ae9.png",
+      "icon": "https://cdn2.steamgriddb.com/icon/cb2b01a7f6fb5da3ed42be4fcf80e4be.png",
+      "save": {
+        "android": "/data/data/com.deivid22srk.dkc2recomp/files/saves"
+      }
     },{
       "name": "Donkey Kong Country 2: Diddy's Kong Quest (DKC2Recomp)",
       "tags": ["snes", "platformer"],
@@ -650,7 +694,8 @@
       "folder": "DKC2Recomp",
       "instructions": "Required files: Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr).sfc (CRC32: 006364DB)",
       "image": "https://cdn2.steamgriddb.com/grid/5815383dbef0d664c7420eecc4303ae9.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/cb2b01a7f6fb5da3ed42be4fcf80e4be.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/cb2b01a7f6fb5da3ed42be4fcf80e4be.png",
+      "save": "saves"
     },{
       "name": "Donkey Kong Country 3: Dixie Kong's Double Trouble! (DKC3Recomp)",
       "tags": ["snes", "platformer"],
@@ -706,7 +751,8 @@
       "folder": "DBZ-Budokai-3-HD-Collection",
       "instructions": "Required files: Dragon Ball Z Budokai 3 HD (USA/EU) for Xbox 360\n\nWindows :\nUse extract-xiso.exe to extract the contents of the ISO. to assets.\nMove the assets folder to the root of the port folder.\n\nAndroid:\n- Create Internal storage → DBZ3 (/storage/emulated/0/DBZ3).\n- Copy your own US/NA Xbox 360 game ISO into that folder. Keep it as .iso, not inside a ZIP.\n- Open DBZ3, grant All files access, and return to the app.\n- Tap Choose ISO, browse to Internal storage → DBZ3, select the ISO, then continue to the launcher and tap Play.\n\nLanguages: Multilingual.",
       "image": "https://cdn2.steamgriddb.com/grid/eef54151a72ee0c2d5d7f0931e16fe2d.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/4ed0bf4797275056399e7725ed8d0937.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/4ed0bf4797275056399e7725ed8d0937.png",
+      "save": "."
     },{
       "name": "Dragon Ball Z: Ultimate Battle 22 (dragon-ball-z-ultimate-battle-22-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -871,7 +917,8 @@
       "website": "https://alexbeav.github.io/psxrecomp-ports/",
       "folder": "fear-effect-2-retro-helix-recomp",
       "instructions": "Required files: SLUS-01266 · SLUS-01275 · SLUS-01276 · SLUS-01277. BIOS: SCPH-1001. Known issues: Wave 4 validation limits apply: Windows setup verified on the exact package; gameplay on the public packages and native Linux/macOS setup are unverified. Use the complete matching Redump CUE/BIN set (or a CHD of it) and the required SCPH-1001 BIOS. Disc changes during play are not qualified.",
-      "image": "",
+      "image": "https://cdn2.steamgriddb.com/grid/e91fba7eb422ffc12f8c1eb867844025.png",
+      "icon": "https://cdn2.steamgriddb.com/icon/83323d5fa94b66f71130ea896433375e.png",
       "save": "saves"
     },{
       "name": "Fighting Force (fighting-force-recomp)",
@@ -880,7 +927,8 @@
       "website": "https://alexbeav.github.io/psxrecomp-ports/",
       "folder": "fighting-force-recomp",
       "instructions": "Required files: SLUS-00433. BIOS: SCPH-1001",
-      "image": "https://cdn2.steamgriddb.com/grid/47e6b2756d146c48266aead5ccf03909.png",
+      "image": "https://cdn2.steamgriddb.com/grid/f75bcb928f32b1ef2017d510bf88a437.png",
+      "icon": "https://cdn2.steamgriddb.com/icon/2270fa1dcbebe770b3b8158dc8ff3265/32/512x512.png",
       "save": "saves"
     },{
       "name": "Final Fantasy IX (final-fantasy-ix-recomp)",
@@ -973,6 +1021,7 @@
       "folder": "ghost-in-the-shell-recomp",
       "instructions": "Required files: SCES-01050. BIOS: SCPH-5552. Known issues: Wave 3 validation limits apply. Use the complete matching Redump CUE/BIN set and the required SCPH-5552 BIOS.",
       "image": "https://cdn2.steamgriddb.com/grid/20bc9c1cba852406a058a4eb94aa2db4.png",
+      "icon": "https://cdn2.steamgriddb.com/icon/2689e302dff9ebabba26b0a2e6b89d68/32/256x256.png",
       "save": "saves"
     },{
       "name": "Goemon's Great Adventure (Goemon64Recomp)",
@@ -981,7 +1030,7 @@
       "folder": "Goemon64Recomp",
       "instructions": "Required files: Goemon's Great Adventure (USA).z64 (CRC32: 52D418E1)\n\nWindows:\nPortable saves : portable.txt in root folder.",
       "mods": "https://gamebanana.com/games/24290",
-      "image": "https://cdn2.steamgriddb.com/grid/7363d3772d8fa8d638fedddde16e4437.png",
+      "image": "https://cdn2.steamgriddb.com/grid/69b717a1d64f62465d96885dcaf9a77d.png",
       "icon": "https://cdn2.steamgriddb.com/icon/7624c43931e8ccf280b8fc7374e89412.png",
       "save": {
         "windows": "%LOCALAPPDATA%\\Goemon64Recompiled",
@@ -1045,7 +1094,8 @@
       "icon": "https://cdn2.steamgriddb.com/icon/d093b4a150384ffc0b1bb5d5042c0df4.png",
       "save": {
         "windows": "%LOCALAPPDATA%\\HarvestMoon64Recompiled",
-        "linux": "~/.config/HarvestMoon64Recompiled"
+        "linux": "~/.config/HarvestMoon64Recompiled",
+        "android": "/storage/emulated/0/Android/data/io.github.hm64recomp/files/saves"
       },
       "save2": "saves"
     },{
@@ -1063,12 +1113,17 @@
       "name": "Ikemen GO",
       "tags": ["pc", "mugen", "fighting", "multiplayer"],
       "source": "https://github.com/ikemen-engine/Ikemen-GO/",
+      "android_source": "https://github.com/leonkasovan/Ikemen-GO",
+      "android_package": "org.ikemen_engine.ikemen_go",
       "folder": "Ikemen-GO",
       "instructions": "https://ikemen-engine.github.io/\n\nDiscord server: https://discord.com/invite/QWxxwjE",
       "mods": "https://google.com/search?q=Ikemen%20GO%20mods",
       "image": "https://cdn2.steamgriddb.com/grid/b3044296f44c3e1e9f8a4f6b53c1c3cb.jpg",
       "icon": "https://cdn2.steamgriddb.com/icon/ea498e82579e76f2b96a4edc7a42ce05.png",
-      "save": "save"
+      "save": {
+        "windows": "save",
+        "android": "/storage/emulated/0/Android/data/org.ikemen_engine.ikemen_go/files/save"
+      }
     },{
       "-name": "Import Tuner Challenge (??)",
       "tags": ["360", "racing"],
@@ -1143,14 +1198,14 @@
       "save": "%APPDATA%\\OpenGOAL",
       "extra": "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/extra/jak-project/OpenGOAL_Launcher.bat"
     },{
-      "name": "Jet Moto / 2 / 3 (Jet-Moto-Anthology)",
+      "-name": "Jet Moto / 2 / 3 (Jet-Moto-Anthology)",
+      "abandonned": "Too many issues according to its developer. Use this: https://jetmotocentral.neocities.org/jmceditionmod",
       "tags": ["ps1", "racing"],
       "source": "https://github.com/GTTeancum/Jet-Moto-Anthology",
       "folder": "Jet-Moto-Anthology",
       "instructions": "Required files: Jet Moto (SCUS-94309), Jet Moto 2: Championship Edition (SCUS-94167) and Jet Moto 3 (SCUS-94555)",
       "image": "https://cdn2.steamgriddb.com/grid/483e11b323ba61276926679ff49f2ee7.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/867ced24bf60f5ace40b3854fce67d84.png",
-      "save": ""
+      "icon": "https://cdn2.steamgriddb.com/icon/867ced24bf60f5ace40b3854fce67d84.png"
     },{
       "name": "Kartia: The Word of Fate (kartia-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -1239,12 +1294,17 @@
       "name": "Luanti",
       "tags": ["free", "pc", "minecraft", "multiplayer"],
       "source": "https://github.com/luanti-org/luanti",
+      "android_source": "https://github.com/luanti-org/luanti",
+      "android_package": "net.minetest.minetest",
       "folder": "luanti",
       "instructions": "https://luanti.org/",
       "mods": "https://content.luanti.org/packages/?type=mod",
       "image": "https://cdn2.steamgriddb.com/grid/88612c6b1238c067e266c39ad5e09668.jpg",
       "icon": "https://cdn2.steamgriddb.com/icon/fbff3e430b33ac364ed26e294730583f.png",
-      "save": "worlds"
+      "save": {
+        "windows": "worlds",
+        "android": "/storage/emulated/0/Android/data/net.minetest.minetest/files/Minetest/worlds"
+      }
     },{
       "name": "Marble Blast Gold (OpenMBG)",
       "tags": ["free", "pc", "platformer", "multiplayer"],
@@ -1286,6 +1346,8 @@
       "image": "https://cdn2.steamgriddb.com/grid/bc11db020cb9418782afa3d1e0a1209b.png",
       "icon": "https://cdn2.steamgriddb.com/icon/2b7d7ea550d05a1386ce3aef76f041f4/32/768x768.png",
       "save": {
+        "windows": "Save",
+        "linux": "Save",
         "android": "Android/data/com.izzy.kart/files"
       }
     },{
@@ -1308,8 +1370,10 @@
       "name": "Mario Party 4 (marioparty4)",
       "tags": ["gc", "party", "multiplayer"],
       "source": "https://github.com/mariopartyrd/marioparty4",
+      "android_source": "https://github.com/mariopartyrd/marioparty4",
+      "android_package": "com.mariopartyrd.partyboard",
       "folder": "marioparty4",
-      "instructions": "",
+      "instructions": "Required files: Rev 0 (USA)/Rev 1 (USA)",
       "image": "https://cdn2.steamgriddb.com/grid/34ee49ced5744eeb86d6e8e9661634aa.png",
       "icon": "https://cdn2.steamgriddb.com/icon/3e60e09c222f206c725385f53d7e567c.png"
     },{
@@ -1590,12 +1654,17 @@
       "name": "osu!",
       "tags": ["free", "pc", "rhythm", "multiplayer", "online"],
       "source": "https://github.com/ppy/osu",
+      "android_source": "https://github.com/ppy/osu",
+      "android_package": "sh.ppy.osulazer",
       "folder": "osu",
       "instructions": "https://osu.ppy.sh/\n\nDiscord server: https://discord.com/invite/osu",
       "mods": "https://osu.ppy.sh/beatmapsets",
       "image": "https://cdn2.steamgriddb.com/grid/79bd2e9fd8400fb610d59e4f0e1019f3.png",
       "icon": "https://cdn2.steamgriddb.com/icon/fe9fc289c3ff0af142b6d3bead98a923/32/256x256.png",
-      "save": "%APPDATA%\\osu",
+      "save": {
+        "windows": "%APPDATA%\\osu",
+        "android": "/storage/emulated/0/Android/data/sh.ppy.osulazer/files"
+      },
       "exe_is_archive": "osu!.exe",
       "preferred_asset": {
         "windows": ".exe",
@@ -1690,7 +1759,8 @@
       "folder": "Open-Nectar---Pikmin-Native-PC-Port",
       "instructions": "Required files: Pikmin USA Rev. 1 (GPIE01) ISO/GCM",
       "image": "https://cdn2.steamgriddb.com/grid/fbb12b97a88a081cf8528b62df955103.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/c746c52c4c3f89696680731b2f46e563.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/c746c52c4c3f89696680731b2f46e563.png",
+      "save": "save/card0"
     },{
       "-name": "Pikmin (pikmin)",
       "tags": ["gc", "strategy"],
@@ -1786,8 +1856,12 @@
       "source": "https://github.com/Rainchus/Quest64-Recomp",
       "folder": "Quest64-Recomp",
       "instructions": "Required files: Quest 64 (USA).z64 (CRC32: D75B45C6)",
-      "image": "https://cdn2.steamgriddb.com/grid/59e6bb2bb03821bb51050ea6d0a23bb8.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/cb11a12474e34b83e38e06d2ef1b2830.png"
+      "image": "https://cdn2.steamgriddb.com/grid/192fbb914227f910d3b9976a8b6b1457.png",
+      "icon": "https://cdn2.steamgriddb.com/icon/cb11a12474e34b83e38e06d2ef1b2830.png",
+      "save": {
+        "windows": "%LOCALAPPDATA%\\Quest64Recompiled\\saves",
+        "linux": "~/.config/Quest64Recompiled/saves"
+      }
     },{
       "name": "R-Type Delta (r-type-delta-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -1834,7 +1908,11 @@
       "source": "https://github.com/khasinski/rage-racer-pc",
       "folder": "rage-racer-pc",
       "instructions": "Required files: Ridge Racer (Europe).bin/cue",
-      "image": "https://cdn2.steamgriddb.com/grid/7fccaf0a51b9cbbcbcca2a4e5cefe7c8.png"
+      "image": "https://cdn2.steamgriddb.com/grid/7fccaf0a51b9cbbcbcca2a4e5cefe7c8.png",
+      "save": {
+        "windows": "%APPDATA%\\Rage Racer\\bu00",
+        "linux": "~/.local/state/rage-racer/bu00"
+      }
     },{
       "name": "Rival Schools: Evolution Disc (rival-schools-evolution-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -1911,7 +1989,7 @@
       "folder": "silent-hill-decomp",
       "instructions": "",
       "image": "https://cdn2.steamgriddb.com/grid/1aed88b7fdc56b77d7971de724e7c6d0.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/4734ba6f3de83d861c3176a6273cac6d.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/8847f8243bea41c5145872e904631d71.png"
     },{
       "name": "Skate 3 (Skate3-Mobile)",
       "tags": ["360", "sport", "multilingual", "android_only"],
@@ -1930,7 +2008,8 @@
       "folder": "skate3recomp",
       "instructions": "Use extract-xiso.exe to extract the assets and place the files in the assets folder at the root of the port folder.",
       "image": "https://cdn2.steamgriddb.com/grid/cb5afcadcac972f1c6d743c96936ebe3.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/f8dfa1bc1dfc7fe4bbd53f1aeb099deb.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/f8dfa1bc1dfc7fe4bbd53f1aeb099deb.png",
+      "save": "%APPDATA%\\skate3"
     },{
       "name": "Slay the Spire 2 (StS2-Launcher)",
       "tags": ["strategy", "android_only"],
@@ -2067,6 +2146,14 @@
       "icon": "https://cdn2.steamgriddb.com/icon/512b457d9340db7aadcdeda99e7ca2b1.png",
       "save": "saves"
     },{
+      "-name": "Spider-Man: Edge of Time (EdgeOfTimeRecomp)",
+      "tags": ["360", "action-adventure"],
+      "source": "https://github.com/goliathret/EdgeOfTimeRecomp",
+      "folder": "EdgeOfTimeRecomp",
+      "instructions": "Required files: : \n\nManual Installation: Use extract-xiso.exe to extract the assets and place the files in the assets folder at the root of the port folder.",
+      "image": "https://cdn2.steamgriddb.com/grid/61c6ddc8fa35f40c7eb51fc06d66499a.png",
+      "icon": "https://cdn2.steamgriddb.com/icon/49f85a9ed090b20c8bed85a5923c669f.png"
+    },{
       "-name": "Spyro the Dragon (openpete)",
       "tags": ["ps1", "platformer"],
       "source": "https://openpete.com/",
@@ -2091,7 +2178,8 @@
       "folder": "starfox-enhanced",
       "instructions": "Required files: Star Fox (USA) (Rev 2).sfc (CRC32: 8FC4E6D0)\n\nLanguages: English.",
       "image": "https://cdn2.steamgriddb.com/grid/081b26a8bdc5222518e51ecdbcc2021c.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/6c19e0a6da12dc02239312f151072ddd.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/6c19e0a6da12dc02239312f151072ddd.png",
+      "save": "."
     },{
       "name": "Star Fox 64 (Starfox64Recomp)",
       "tags": ["lylat wars", "n64", "shooter"],
@@ -2118,6 +2206,7 @@
       "icon": "https://cdn2.steamgriddb.com/icon/9fbcbcb41e52efd7dbcb96e8a5c4cb63/32/256x256.png",
       "save": {
         "windows": "Save",
+        "linux": "Save",
         "android": "Android/data/com.starship.android/files"
       }
     },{
@@ -2229,6 +2318,8 @@
       "image": "https://cdn2.steamgriddb.com/grid/ea98cb4ef75b56acda616e5166438fb6.png",
       "icon": "https://cdn2.steamgriddb.com/icon/f2201f5191c4e92cc5af043eebfd0946.png",
       "save": {
+        "windows": "Save",
+        "linux": "Save",
         "android": "Android/data/com.ghostship.android/files"
       }
     },{
@@ -2496,6 +2587,7 @@
       "icon": "https://cdn2.steamgriddb.com/icon/4e0928de075538c593fbdabb0c5ef2c3.png",
       "save": {
         "windows": "Save",
+        "linux": "Save",
         "android": "/sdcard/2S2H"
       }
     },{
@@ -2528,6 +2620,7 @@
       "icon": "https://cdn2.steamgriddb.com/icon/a896144046a1b5bd6e3e034d00b4f73a.png",
       "save": {
         "windows": "Save",
+        "linux": "Save",
         "android": "/sdcard/SOH"
       },
       "extra": "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/extra/Shipwright/"
@@ -2560,7 +2653,7 @@
       "folder": "",
       "instructions": "Languages: Multilingual.",
       "image": "https://cdn2.steamgriddb.com/grid/304678bd2a45713cc7bfcb1a9e19c8e4.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/186c9b923fc7eb4df8e7b4cfbeb234b7.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/827a1fd7a77a96b4c3a3cd36b431f878.png"
     },{
       "name": "The Legend of Zelda: Twilight Princess (dusklight)",
       "tags": ["gc", "action-adventure", "multilingual"],
@@ -2645,7 +2738,11 @@
       "folder": "tombarecomp",
       "instructions": "Required files: Tomba! (USA).bin (CRC32: B00ECB0D) + PSX - SCPH1001.BIN",
       "image": "https://cdn2.steamgriddb.com/grid/b5b03b0b1f713cd2fffdb28d09adff6e.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/752d2c9ecfe079e5e5f3539f4d750e5c.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/752d2c9ecfe079e5e5f3539f4d750e5c.png",
+      "save": {
+        "windows": "saves",
+        "linux": "~/.local/share/TombaRecomp"
+      }
     },{
       "name": "Tony Hawk's Pro Skater (tony-hawk-s-pro-skater-recomp)",
       "tags": ["ps1", "alexbeav", "multiplayer"],
@@ -2693,7 +2790,8 @@
       "folder": "Project8Recomp",
       "instructions": "Required files: (CRC32: )\n\nUse extract-xiso.exe to extract the assets and place the files in the assets folder at the root of the port folder.",
       "image": "https://cdn2.steamgriddb.com/grid/f4916a3556ed7cd820b7d66f984bdc9f.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/b1cc074da618ac7d0807bf126726fda3.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/b1cc074da618ac7d0807bf126726fda3.png",
+      "save": "saves"
     },{
       "name": "Valkyrie Profile (valkyrie-profile-recomp)",
       "tags": ["ps1", "alexbeav"],
@@ -2777,7 +2875,8 @@
       "folder": "RaceWave46",
       "instructions": "Required files: Wave Race 64 (USA) (Rev A)",
       "image": "https://cdn2.steamgriddb.com/grid/8865522a87f300bac8a03a4ddcbc784b.png",
-      "icon": "https://cdn2.steamgriddb.com/icon/65c2dd61d53e765e7c7363dbfe10cdd9.png"
+      "icon": "https://cdn2.steamgriddb.com/icon/65c2dd61d53e765e7c7363dbfe10cdd9.png",
+      "save": ".runtime"
     },{
       "name": "Wave Race 64 (wave-race-64-recomp)",
       "tags": ["n64", "racing"],

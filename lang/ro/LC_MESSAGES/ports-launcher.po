@@ -231,6 +231,9 @@ msgstr "Verificare actualizări: Activ"
 msgid "Check for Updates: Off"
 msgstr "Verificare actualizări: Dezactivat"
 
+msgid "Force Update"
+msgstr "Forțează actualizarea"
+
 msgid "Type to search..."
 msgstr "Caută..."
 

@@ -231,6 +231,9 @@ msgstr "Sprawdzanie aktualizacji: Wł."
 msgid "Check for Updates: Off"
 msgstr "Sprawdzanie aktualizacji: Wył."
 
+msgid "Force Update"
+msgstr "Wymuś aktualizację"
+
 msgid "Type to search..."
 msgstr "Szukaj..."
 

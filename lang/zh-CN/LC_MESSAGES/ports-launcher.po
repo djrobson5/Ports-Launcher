@@ -231,6 +231,9 @@ msgstr "检查更新：开"
 msgid "Check for Updates: Off"
 msgstr "检查更新：关"
 
+msgid "Force Update"
+msgstr "强制更新"
+
 msgid "Type to search..."
 msgstr "输入以搜索..."
 

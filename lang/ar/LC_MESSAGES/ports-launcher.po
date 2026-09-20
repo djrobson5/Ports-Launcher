@@ -231,6 +231,9 @@ msgstr "التحقق من التحديثات: مفعّل"
 msgid "Check for Updates: Off"
 msgstr "التحقق من التحديثات: معطّل"
 
+msgid "Force Update"
+msgstr "فرض التحديث"
+
 msgid "Type to search..."
 msgstr "ابحث..."
 

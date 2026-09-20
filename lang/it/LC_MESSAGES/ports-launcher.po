@@ -231,6 +231,9 @@ msgstr "Controllo aggiornamenti: Attivo"
 msgid "Check for Updates: Off"
 msgstr "Controllo aggiornamenti: Disattivato"
 
+msgid "Force Update"
+msgstr "Forza aggiornamento"
+
 msgid "Type to search..."
 msgstr "Cerca..."
 

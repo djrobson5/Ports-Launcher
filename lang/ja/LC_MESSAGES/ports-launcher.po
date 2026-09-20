@@ -231,6 +231,9 @@ msgstr "更新チェック：オン"
 msgid "Check for Updates: Off"
 msgstr "更新チェック：オフ"
 
+msgid "Force Update"
+msgstr "強制更新"
+
 msgid "Type to search..."
 msgstr "検索..."
 

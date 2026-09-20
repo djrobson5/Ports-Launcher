@@ -231,6 +231,9 @@ msgstr "Buscar actualizaciones: Activado"
 msgid "Check for Updates: Off"
 msgstr "Buscar actualizaciones: Desactivado"
 
+msgid "Force Update"
+msgstr "Forzar actualización"
+
 msgid "Type to search..."
 msgstr "Buscar..."
 

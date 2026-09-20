@@ -231,6 +231,9 @@ msgstr "Kiểm tra cập nhật: Bật"
 msgid "Check for Updates: Off"
 msgstr "Kiểm tra cập nhật: Tắt"
 
+msgid "Force Update"
+msgstr "Buộc cập nhật"
+
 msgid "Type to search..."
 msgstr "Tìm kiếm..."
 

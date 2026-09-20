@@ -231,6 +231,9 @@ msgstr "Проверка обновлений: вкл."
 msgid "Check for Updates: Off"
 msgstr "Проверка обновлений: выкл."
 
+msgid "Force Update"
+msgstr "Принудительное обновление"
+
 msgid "Type to search..."
 msgstr "Поиск..."
 
