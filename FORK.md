@@ -17,16 +17,29 @@ kept in sync with upstream so it can serve as a base for experimental features
   git push origin main
   ```
 
-- If upstream rewrites its history (the job fails with "shares no history"),
-  the fork's `main` has to be rebuilt on the new upstream tip. Fork-local
-  commits are the ones after the last upstream commit:
+- Upstream regularly force-pushes a squashed `main`. The job handles that on
+  its own: it replays every non-merge commit authored by `djrobson5` onto the
+  new upstream tip, saves the old `main` as
+  `backup/main-before-upstream-rewrite-<date>`, and force-pushes. Keep
+  fork-only changes in commits authored as `djrobson5` so they get replayed;
+  merge commits are not replayed. Delete old `backup/*` branches when you no
+  longer need them.
+- Rebuilding `main` re-creates the commit that adds the workflow file, which
+  the default `GITHUB_TOKEN` may not push. The job therefore uses the
+  `SYNC_TOKEN` secret: a fine-grained PAT scoped to this repo with
+  **Contents: read and write** and **Workflows: read and write**.
+- If replaying conflicts, the job fails without pushing. Rebuild by hand:
 
   ```sh
   git fetch upstream
-  git rebase --onto upstream/main <last-upstream-commit-on-main> main
+  git checkout -B main upstream/main
+  git cherry-pick $(git log --reverse --no-merges --format=%H --author=djrobson5 origin/main)
   # resolve conflicts (keep upstream's lines, swap Nyaldee -> djrobson5)
-  git push --force-with-lease origin main
+  git push --force-with-lease=main:$(git rev-parse origin/main) origin main
   ```
+
+  The sync logic lives in `.github/scripts/sync-upstream.sh`; running it from
+  a checkout of `main` does the same thing as the job.
 
 ## Divergences from upstream
 
