@@ -16,9 +16,9 @@ const UPDATER_NAME: &str = "ports_launcher_updater.bat";
 const UPDATER_NAME: &str = "ports_launcher_updater.sh";
 
 #[cfg(target_os = "windows")]
-const UPDATER_RAW_URL: &str = "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/ports_launcher_updater.bat";
+const UPDATER_RAW_URL: &str = "https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main/ports_launcher_updater.bat";
 #[cfg(target_os = "linux")]
-const UPDATER_RAW_URL: &str = "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/ports_launcher_updater.sh";
+const UPDATER_RAW_URL: &str = "https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main/ports_launcher_updater.sh";
 
 fn refresh_updater_script(path: &Path) {
     let agent = crate::core::http::agent(Duration::from_secs(5));
