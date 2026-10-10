@@ -2,8 +2,8 @@
 printf '\033]0;Ports Launcher Updater\007'
 cd "$(dirname "$(readlink -f "$0")")" || exit 1
 
-REPO="https://github.com/Nyaldee/Ports-Launcher"
-RAW="https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main"
+REPO="https://github.com/djrobson5/Ports-Launcher"
+RAW="https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main"
 SELF="$(basename "$0")"
 
 fail() {
