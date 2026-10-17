@@ -2,8 +2,8 @@
 title Ports Launcher Updater & color 0A
 cd /d "%~dp0"
 
-set "REPO=https://github.com/Nyaldee/Ports-Launcher"
-set "RAW=https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main"
+set "REPO=https://github.com/djrobson5/Ports-Launcher"
+set "RAW=https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main"
 set "ARCHIVE=%TEMP%\PortsLauncher-update.zip"
 
 taskkill /IM "ports_launcher.exe" /F >nul 2>&1
