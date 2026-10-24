@@ -3,8 +3,8 @@ use super::{config, http};
 use serde_json::Value;
 use std::time::Duration;
 
-const PORTS_RAW_URL: &str = "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/ports.json";
-const THEMES_RAW_URL: &str = "https://raw.githubusercontent.com/Nyaldee/Ports-Launcher/main/themes.json";
+const PORTS_RAW_URL: &str = "https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main/ports.json";
+const THEMES_RAW_URL: &str = "https://raw.githubusercontent.com/djrobson5/Ports-Launcher/main/themes.json";
 
 pub enum CatalogUpdate {
     NotModified,

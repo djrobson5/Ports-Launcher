@@ -1,0 +1,37 @@
+# Keeps this fork's `main` in sync with Nyaldee/Ports-Launcher.
+# `main` is upstream/main plus one "fork overlay" commit (fork files, catalog
+# entries from fork/ports.json, repo URLs pointed at the fork). Whenever
+# upstream moves, the overlay is rebuilt on the new tip and force-pushed, so
+# upstream rewrites never conflict. Logic lives in .github/scripts/sync-upstream.sh.
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # daily, 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          # Rebuilding main re-creates the commit that adds this workflow file,
+          # which GITHUB_TOKEN is not allowed to push. SYNC_TOKEN is a PAT with
+          # Contents + Workflows write on the fork (see FORK.md).
+          token: ${{ secrets.SYNC_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Sync with upstream/main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          bash .github/scripts/sync-upstream.sh
